@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,15 +6,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Robert Senatorov • ML Engineer</title>
   <link rel="stylesheet" href="styles.css"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
 </head>
-<body class="light-theme"> <div class="page-background"></div> <div class="page-wrapper"> <div class="content-container"> <header class="header">
+<body class="light-theme">
+  <div class="page-background"></div>
+  <div class="page-wrapper">
+    <div class="content-container">
+      <!-- Header -->
+      <header class="header">
         <div class="logo">
           <span class="logo-name">Robert<span>Senatorov</span></span>
-          <span class="logo-tag">ML Engineer</span>
+          <span class="logo-tag">Machine Learning Engineer</span>
         </div>
         <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
           <span class="hamburger"></span>
@@ -28,20 +37,28 @@
           </ul>
         </nav>
         <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
-          <i class="fas fa-moon"></i> </button>
+          <i class="fas fa-moon"></i>
+        </button>
       </header>
 
       <main>
+        <!-- Hero Section -->
         <section id="hero" class="section hero">
           <div class="hero-content">
             <h1 class="glitch-text" data-text="Robert Senatorov">Robert Senatorov</h1>
-            <p class="subtitle fade-in-element">Machine Learning Engineer & AI Specialist</p>
+            <p class="subtitle fade-in-element">Machine Learning Engineer</p>
             <p class="hero-text slide-in-element">
               Building <span class="highlight">intelligent systems</span> that solve real-world problems in
               <span class="typewriter-container"><span class="typewriter">computer vision, NLP, data science.</span></span>
             </p>
             <div class="hero-cta scale-in-element">
               <a href="#projects" class="btn primary-btn">View Projects</a>
+              <a href="assets/Robert_Senatorov_Resume.pdf"
+                 class="btn secondary-btn"
+                 target="_blank"
+                 rel="noopener">
+                Resume
+              </a>
               <a href="#contact" class="btn secondary-btn">Contact Me</a>
             </div>
           </div>
@@ -64,12 +81,14 @@
           </div>
         </section>
 
+        <!-- About Section -->
         <section id="about" class="section about">
           <h2 class="section-title">About Me</h2>
           <div class="about-content-grid">
             <div class="profile-card">
               <div class="profile-photo">
-                <img src="https://via.placeholder.com/250" alt="Robert Senatorov" class="profile-img-placeholder">
+                <!-- Rounded-square headshot -->
+                <img src="assets/headshot.jpg" alt="Robert Senatorov" class="profile-img">
               </div>
               <div class="profile-links">
                 <a href="#" class="social-link tooltip" aria-label="Robert Senatorov's GitHub profile">
@@ -80,7 +99,7 @@
                   <i class="fab fa-linkedin"></i> LinkedIn
                   <span class="tooltip-text">View LinkedIn</span>
                 </a>
-                <a href="#" class="social-link tooltip" aria-label="Robert Senatorov's Resume">
+                <a href="#" class="social-link tooltip" aria-label="Download Resume">
                   <i class="fas fa-file-alt"></i> Resume
                   <span class="tooltip-text">Download Resume</span>
                 </a>
@@ -106,13 +125,12 @@
           </div>
         </section>
 
+        <!-- Skills Section -->
         <section id="skills" class="section skills">
           <h2 class="section-title">Technical Skills</h2>
           <div class="skills-grid">
             <div class="skill-category" data-skill="ml">
-              <div class="skill-icon">
-                <i class="fas fa-brain"></i>
-              </div>
+              <div class="skill-icon"><i class="fas fa-brain"></i></div>
               <h3>Machine Learning</h3>
               <ul class="skill-list">
                 <li>PyTorch</li>
@@ -124,9 +142,7 @@
               </ul>
             </div>
             <div class="skill-category" data-skill="data">
-              <div class="skill-icon">
-                <i class="fas fa-database"></i>
-              </div>
+              <div class="skill-icon"><i class="fas fa-database"></i></div>
               <h3>Data Engineering</h3>
               <ul class="skill-list">
                 <li>Python</li>
@@ -138,9 +154,7 @@
               </ul>
             </div>
             <div class="skill-category" data-skill="devops">
-              <div class="skill-icon">
-                <i class="fas fa-server"></i>
-              </div>
+              <div class="skill-icon"><i class="fas fa-server"></i></div>
               <h3>DevOps</h3>
               <ul class="skill-list">
                 <li>Docker</li>
@@ -154,6 +168,7 @@
           </div>
         </section>
 
+        <!-- Projects Section -->
         <section id="projects" class="section projects">
           <h2 class="section-title">Featured Projects</h2>
           <div class="projects-grid">
@@ -161,88 +176,60 @@
               <div class="project-content">
                 <h3>Autonomous Delivery Robot</h3>
                 <p>Computer vision-powered navigation system using stereo depth estimation and path planning algorithms.</p>
-                <div class="project-tags">
-                  <span>PyTorch</span>
-                  <span>ROS</span>
-                  <span>OpenCV</span>
-                </div>
+                <div class="project-tags"><span>PyTorch</span><span>ROS</span><span>OpenCV</span></div>
                 <a href="#" class="project-link"><i class="fab fa-github"></i> View on GitHub</a>
               </div>
             </div>
-
             <div class="project-card">
               <div class="project-content">
                 <h3>NLP Chatbot</h3>
                 <p>Transformer-based conversational AI with custom knowledge base integration and multi-turn context handling.</p>
-                <div class="project-tags">
-                  <span>BERT</span>
-                  <span>Flask</span>
-                  <span>Docker</span>
-                </div>
+                <div class="project-tags"><span>BERT</span><span>Flask</span><span>Docker</span></div>
                 <a href="#" class="project-link"><i class="fab fa-github"></i> View on GitHub</a>
               </div>
             </div>
-
             <div class="project-card">
               <div class="project-content">
                 <h3>Time-Series Forecaster</h3>
                 <p>Ensemble model combining Prophet and LSTM networks for high-accuracy sales prediction with 5% MAPE.</p>
-                <div class="project-tags">
-                  <span>PyTorch</span>
-                  <span>Prophet</span>
-                  <span>AWS</span>
-                </div>
+                <div class="project-tags"><span>PyTorch</span><span>Prophet</span><span>AWS</span></div>
                 <a href="#" class="project-link"><i class="fab fa-github"></i> View on GitHub</a>
               </div>
             </div>
-
             <div class="project-card">
               <div class="project-content">
                 <h3>Image Classifier</h3>
                 <p>Fine-tuned ResNet50 architecture achieving 98% accuracy on custom dataset with CI/CD deployment pipeline.</p>
-                <div class="project-tags">
-                  <span>TensorFlow</span>
-                  <span>AWS</span>
-                  <span>MLflow</span>
-                </div>
+                <div class="project-tags"><span>TensorFlow</span><span>AWS</span><span>MLflow</span></div>
                 <a href="#" class="project-link"><i class="fab fa-github"></i> View on GitHub</a>
               </div>
             </div>
-
             <div class="project-card">
               <div class="project-content">
                 <h3>Recommender System</h3>
                 <p>Hybrid collaborative filtering and content-based system with real-time user preference adaptation.</p>
-                <div class="project-tags">
-                  <span>PySpark</span>
-                  <span>FastAPI</span>
-                  <span>Redis</span>
-                </div>
+                <div class="project-tags"><span>PySpark</span><span>FastAPI</span><span>Redis</span></div>
                 <a href="#" class="project-link"><i class="fab fa-github"></i> View on GitHub</a>
               </div>
             </div>
-
             <div class="project-card">
               <div class="project-content">
                 <h3>Anomaly Detection Platform</h3>
                 <p>Self-supervised learning approach for detecting anomalies in manufacturing sensor data and images.</p>
-                <div class="project-tags">
-                  <span>PyTorch</span>
-                  <span>Kafka</span>
-                  <span>Grafana</span>
-                </div>
+                <div class="project-tags"><span>PyTorch</span><span>Kafka</span><span>Grafana</span></div>
                 <a href="#" class="project-link"><i class="fab fa-github"></i> View on GitHub</a>
               </div>
             </div>
           </div>
         </section>
 
+        <!-- Contact Section (form removed) -->
         <section id="contact" class="section contact">
           <h2 class="section-title">Get In Touch</h2>
           <div class="contact-grid">
             <div class="contact-info">
-                <h3>Contact Information</h3>
-                <p>Feel free to reach out via email or connect with me on social media.</p>
+              <h3>Contact Information</h3>
+              <p>Feel free to reach out via email or connect with me on social media.</p>
               <div class="contact-item">
                 <i class="fas fa-envelope"></i>
                 <a href="mailto:robert@example.com">robert@example.com</a>
@@ -256,41 +243,23 @@
                 <a href="https://github.com/robertsenatorov" target="_blank" rel="noopener noreferrer">github.com/robertsenatorov</a>
               </div>
             </div>
-            <div class="contact-form-container">
-              <h3>Send a Message</h3>
-              <form class="contact-form">
-                <div class="form-group">
-                  <label for="name-input">Name</label>
-                  <input type="text" id="name-input" placeholder="Your Name" required>
-                  <span class="focus-border"></span>
-                </div>
-                <div class="form-group">
-                  <label for="email-input">Email</label>
-                  <input type="email" id="email-input" placeholder="Your Email" required>
-                  <span class="focus-border"></span>
-                </div>
-                <div class="form-group">
-                  <label for="message-input">Message</label>
-                  <textarea id="message-input" placeholder="Your Message" rows="5" required></textarea>
-                  <span class="focus-border"></span>
-                </div>
-                <button type="submit" class="btn primary-btn">Send Message</button>
-              </form>
-            </div>
           </div>
         </section>
       </main>
 
+      <!-- Footer -->
       <footer class="footer">
         <p>&copy; <span id="current-year">2025</span> Robert Senatorov. All rights reserved.</p>
       </footer>
+    </div>
+  </div>
 
-    </div> </div> <button class="scroll-top" aria-label="Scroll to top">
+  <!-- Scroll to Top & Loader -->
+  <button class="scroll-top" aria-label="Scroll to top">
     <i class="fas fa-arrow-up"></i>
   </button>
-
   <div class="loader">
-      <div class="loader-spinner"></div>
+    <div class="loader-spinner"></div>
   </div>
 
   <script src="script.js"></script>

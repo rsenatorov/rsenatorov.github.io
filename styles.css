@@ -175,27 +175,32 @@ a:hover, a:focus { color: var(--primary-hover); text-decoration: underline; }
 
 /* Theme Toggle Button */
 .theme-toggle {
-  background: none;
-  border: 1px solid var(--border-color);
-  color: var(--text-color);
-  font-size: 1.2rem;
-  cursor: pointer;
-  padding: 0.6rem;
-  border-radius: 50%;
+  width: 2.5rem;               /* force same width */
+  height: 2.5rem;              /* force same height */
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  font-size: 1.2rem;           /* icon size */
+  color: var(--text-color);
+  background: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
-.theme-toggle:hover, .theme-toggle:focus {
+
+.theme-toggle i {
+  display: inline-block;
+  width: 1em;                  /* fix icon container */
+  line-height: 1;
+  text-align: center;
+}
+
+/* optional hover states */
+.theme-toggle:hover {
   background-color: var(--accent-color);
   border-color: var(--primary-color);
-  transform: scale(1.1);
 }
-.theme-toggle i { transition: transform 0.3s ease-out; }
-body.dark-theme .theme-toggle .fa-moon { display: none; }
-body.light-theme .theme-toggle .fa-sun { display: none; }
-
 
 /* Hamburger Menu (Mobile) */
 .nav-toggle {
@@ -336,9 +341,10 @@ body.light-theme .theme-toggle .fa-sun { display: none; }
 /* ---=== About Section ===--- */
 .about-content-grid {
   display: grid;
-  grid-template-columns: 1fr; /* Default to single column */
+  /* auto makes the first column shrink-to-fit your .profile-card content */
+  grid-template-columns: auto 1fr;
   gap: 2.5rem;
-  align-items: center;
+  align-items: start;    /* align the top of your image with the first paragraph */
 }
 .profile-card {
   display: flex;
@@ -347,10 +353,10 @@ body.light-theme .theme-toggle .fa-sun { display: none; }
   text-align: center;
 }
 .profile-photo img {
-  width: 180px;
-  height: 180px;
+  width: 420px;
+  height: 420px;
   object-fit: cover;
-  border-radius: 50%;
+  border-radius: 12px;                /* → softened corners */
   border: 4px solid var(--primary-color);
   margin-bottom: 1.5rem;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -714,7 +720,10 @@ body.dark-theme .form-group textarea:focus {
   .hero-content { max-width: 60%; }
   .hero-visual { max-width: 35%; margin-top: 0; }
   .hero-cta { justify-content: flex-start; }
-  .about-content-grid { grid-template-columns: 0.8fr 1.2fr; /* Sidebar for profile, main for text */ text-align: left; }
+  .about-content-grid {
+    grid-template-columns: auto 1fr;    /* shrink‐to‐fit your profile‐card */
+    text-align: left;
+  }
   .profile-card { align-items: flex-start; }
   .profile-links { justify-content: flex-start; }
   .contact-grid { grid-template-columns: 1fr 1.5fr; gap: 3rem; }

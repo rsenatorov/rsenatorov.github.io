@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function() {
     const body = document.body;
     const themeToggle = document.getElementById('theme-toggle');
@@ -166,19 +167,33 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
     // ---=== Intersection Observer for Section Animations ===--- //
-    const sectionObserver = new IntersectionObserver((entries, observer) => {
+    const sectionObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                // Optional: unobserve after animation if not needed again
-                // observer.unobserve(entry.target);
-            }
+        entry.target.classList.toggle('visible', entry.isIntersecting);
         });
-    }, { threshold: 0.1 });
-
+    }, {
+        threshold: 0.1
+    });
+    
     document.querySelectorAll('.section').forEach(section => {
         sectionObserver.observe(section);
     });
+  
+    const scrollLoaderObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            loader.classList.remove('hidden');
+            setTimeout(() => loader.classList.add('hidden'), 500);
+          }
+        });
+      }, {
+        threshold: 0.1
+      });
+      
+      // observe all sections for loader animation on both scroll directions
+      document.querySelectorAll('.section').forEach(section =>
+        scrollLoaderObserver.observe(section)
+      );
 
     // Initial animation for elements already in view (like hero elements)
     document.querySelectorAll('.fade-in-element, .slide-in-element, .scale-in-element').forEach(el => {
