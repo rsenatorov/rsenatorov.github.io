@@ -1,142 +1,298 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Your Name – Portfolio</title>
-  <style>
-    /* Basic reset */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      color: #333;
-      background: #f9f9f9;
-    }
-
-    header {
-      background: #4a90e2;
-      color: white;
-      padding: 4rem 1rem;
-      text-align: center;
-    }
-    header h1 { font-size: 3rem; margin-bottom: 0.5rem; }
-    header p { font-size: 1.25rem; }
-
-    section {
-      max-width: 800px;
-      margin: 3rem auto;
-      padding: 0 1rem;
-    }
-
-    /* About Me */
-    #about img {
-      float: right;
-      margin: 0 0 1rem 1rem;
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      border-radius: 50%;
-    }
-
-    /* Projects grid */
-    #projects .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.5rem;
-    }
-    .project-card {
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      padding: 1rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-    .project-card h3 { margin-bottom: 0.5rem; }
-    .project-card p { flex-grow: 1; }
-    .project-card a {
-      display: inline-block;
-      margin-top: 1rem;
-      text-decoration: none;
-      color: #4a90e2;
-      font-weight: bold;
-    }
-
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      font-size: 0.9rem;
-      color: #777;
-    }
-
-    @media (max-width: 600px) {
-      header h1 { font-size: 2.25rem; }
-      header p  { font-size: 1rem; }
-    }
-  </style>
+  <title>Robert Senatorov • ML Engineer</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="light-theme"> <div class="page-background"></div> <div class="page-wrapper"> <div class="content-container"> <header class="header">
+        <div class="logo">
+          <span class="logo-name">Robert<span>Senatorov</span></span>
+          <span class="logo-tag">ML Engineer</span>
+        </div>
+        <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-menu">
+          <span class="hamburger"></span>
+        </button>
+        <nav class="nav" id="nav-menu">
+          <ul>
+            <li><a href="#hero" class="nav-link">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+          <i class="fas fa-moon"></i> </button>
+      </header>
 
-  <!-- Hero / Hello -->
-  <header>
-    <h1>Hello, I’m Your Name!</h1>
-    <p>Welcome to my personal website.</p>
-  </header>
+      <main>
+        <section id="hero" class="section hero">
+          <div class="hero-content">
+            <h1 class="glitch-text" data-text="Robert Senatorov">Robert Senatorov</h1>
+            <p class="subtitle fade-in-element">Machine Learning Engineer & AI Specialist</p>
+            <p class="hero-text slide-in-element">
+              Building <span class="highlight">intelligent systems</span> that solve real-world problems in
+              <span class="typewriter-container"><span class="typewriter">computer vision, NLP, data science.</span></span>
+            </p>
+            <div class="hero-cta scale-in-element">
+              <a href="#projects" class="btn primary-btn">View Projects</a>
+              <a href="#contact" class="btn secondary-btn">Contact Me</a>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="shape-container">
+              <div class="shape shape-1"></div>
+              <div class="shape shape-2"></div>
+              <div class="shape shape-3"></div>
+              <div class="neural-network">
+                <div class="nodes">
+                  <div class="node" style="--i:1"></div>
+                  <div class="node" style="--i:2"></div>
+                  <div class="node" style="--i:3"></div>
+                  <div class="node" style="--i:4"></div>
+                  <div class="node" style="--i:5"></div>
+                </div>
+                <div class="connections"></div>
+              </div>
+            </div>
+          </div>
+        </section>
 
-  <!-- About Me -->
-  <section id="about">
-    <h2>About Me</h2>
-    <img src="your-photo.jpg" alt="Your Name" />
-    <p>
-      I’m a [your role, e.g. “Full-Stack Developer”] based in [your location]. I love building web applications, exploring new technologies, and solving challenging problems. When I’m not coding, I enjoy [your hobbies/interests].
-    </p>
-  </section>
+        <section id="about" class="section about">
+          <h2 class="section-title">About Me</h2>
+          <div class="about-content-grid">
+            <div class="profile-card">
+              <div class="profile-photo">
+                <img src="https://via.placeholder.com/250" alt="Robert Senatorov" class="profile-img-placeholder">
+              </div>
+              <div class="profile-links">
+                <a href="#" class="social-link tooltip" aria-label="Robert Senatorov's GitHub profile">
+                  <i class="fab fa-github"></i> GitHub
+                  <span class="tooltip-text">View GitHub</span>
+                </a>
+                <a href="#" class="social-link tooltip" aria-label="Robert Senatorov's LinkedIn profile">
+                  <i class="fab fa-linkedin"></i> LinkedIn
+                  <span class="tooltip-text">View LinkedIn</span>
+                </a>
+                <a href="#" class="social-link tooltip" aria-label="Robert Senatorov's Resume">
+                  <i class="fas fa-file-alt"></i> Resume
+                  <span class="tooltip-text">Download Resume</span>
+                </a>
+              </div>
+            </div>
+            <div class="about-text">
+              <p>
+                I'm a <span class="highlight">Machine Learning Engineer</span> with 5+ years of experience in designing,
+                training, and deploying models at scale. My expertise lies in transforming
+                cutting-edge research into <span class="highlight">production-ready applications</span> that deliver measurable business value.
+              </p>
+              <p>
+                My approach combines strong <span class="bold">theoretical foundations</span> with practical implementation skills,
+                allowing me to tackle complex problems across various domains including <span class="bold">computer vision</span>,
+                <span class="bold">natural language processing</span>, and <span class="bold">time-series analysis</span>.
+              </p>
+              <p>
+                I'm passionate about staying at the forefront of AI advancements and bringing that knowledge to solve
+                real-world challenges. My goal is to build AI systems that are not just powerful, but also
+                explainable, ethical, and aligned with human values.
+              </p>
+            </div>
+          </div>
+        </section>
 
-  <!-- Projects -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="grid">
-      <!-- Project 1 -->
-      <div class="project-card">
-        <h3>Project One</h3>
-        <p>Short description of your first project goes here. What does it do, what tech did you use?</p>
-        <a href="https://github.com/yourusername/project-one" target="_blank">View on GitHub →</a>
-      </div>
-      <!-- Project 2 -->
-      <div class="project-card">
-        <h3>Project Two</h3>
-        <p>Short description of your second project goes here. What does it do, what tech did you use?</p>
-        <a href="#">Learn More →</a>
-      </div>
-      <!-- Project 3 -->
-      <div class="project-card">
-        <h3>Project Three</h3>
-        <p>Short description of your third project goes here. What does it do, what tech did you use?</p>
-        <a href="#">Learn More →</a>
-      </div>
-      <!-- Project 4 -->
-      <div class="project-card">
-        <h3>Project Four</h3>
-        <p>Short description of your fourth project goes here. What does it do, what tech did you use?</p>
-        <a href="#">Learn More →</a>
-      </div>
-      <!-- Project 5 -->
-      <div class="project-card">
-        <h3>Project Five</h3>
-        <p>Short description of your fifth project goes here. What does it do, what tech did you use?</p>
-        <a href="#">Learn More →</a>
-      </div>
-    </div>
-  </section>
+        <section id="skills" class="section skills">
+          <h2 class="section-title">Technical Skills</h2>
+          <div class="skills-grid">
+            <div class="skill-category" data-skill="ml">
+              <div class="skill-icon">
+                <i class="fas fa-brain"></i>
+              </div>
+              <h3>Machine Learning</h3>
+              <ul class="skill-list">
+                <li>PyTorch</li>
+                <li>TensorFlow</li>
+                <li>Scikit-Learn</li>
+                <li>Computer Vision</li>
+                <li>NLP</li>
+                <li>Time Series</li>
+              </ul>
+            </div>
+            <div class="skill-category" data-skill="data">
+              <div class="skill-icon">
+                <i class="fas fa-database"></i>
+              </div>
+              <h3>Data Engineering</h3>
+              <ul class="skill-list">
+                <li>Python</li>
+                <li>SQL</li>
+                <li>NumPy</li>
+                <li>Pandas</li>
+                <li>Spark</li>
+                <li>Data Pipelines</li>
+              </ul>
+            </div>
+            <div class="skill-category" data-skill="devops">
+              <div class="skill-icon">
+                <i class="fas fa-server"></i>
+              </div>
+              <h3>DevOps</h3>
+              <ul class="skill-list">
+                <li>Docker</li>
+                <li>AWS</li>
+                <li>CI/CD</li>
+                <li>Git</li>
+                <li>Kubernetes</li>
+                <li>MLOps</li>
+              </ul>
+            </div>
+          </div>
+        </section>
 
-  <!-- Footer -->
-  <footer>
-    © 2025 Your Name. Built with ❤️ on GitHub Pages.
-  </footer>
+        <section id="projects" class="section projects">
+          <h2 class="section-title">Featured Projects</h2>
+          <div class="projects-grid">
+            <div class="project-card">
+              <div class="project-content">
+                <h3>Autonomous Delivery Robot</h3>
+                <p>Computer vision-powered navigation system using stereo depth estimation and path planning algorithms.</p>
+                <div class="project-tags">
+                  <span>PyTorch</span>
+                  <span>ROS</span>
+                  <span>OpenCV</span>
+                </div>
+                <a href="#" class="project-link"><i class="fab fa-github"></i> View on GitHub</a>
+              </div>
+            </div>
 
+            <div class="project-card">
+              <div class="project-content">
+                <h3>NLP Chatbot</h3>
+                <p>Transformer-based conversational AI with custom knowledge base integration and multi-turn context handling.</p>
+                <div class="project-tags">
+                  <span>BERT</span>
+                  <span>Flask</span>
+                  <span>Docker</span>
+                </div>
+                <a href="#" class="project-link"><i class="fab fa-github"></i> View on GitHub</a>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-content">
+                <h3>Time-Series Forecaster</h3>
+                <p>Ensemble model combining Prophet and LSTM networks for high-accuracy sales prediction with 5% MAPE.</p>
+                <div class="project-tags">
+                  <span>PyTorch</span>
+                  <span>Prophet</span>
+                  <span>AWS</span>
+                </div>
+                <a href="#" class="project-link"><i class="fab fa-github"></i> View on GitHub</a>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-content">
+                <h3>Image Classifier</h3>
+                <p>Fine-tuned ResNet50 architecture achieving 98% accuracy on custom dataset with CI/CD deployment pipeline.</p>
+                <div class="project-tags">
+                  <span>TensorFlow</span>
+                  <span>AWS</span>
+                  <span>MLflow</span>
+                </div>
+                <a href="#" class="project-link"><i class="fab fa-github"></i> View on GitHub</a>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-content">
+                <h3>Recommender System</h3>
+                <p>Hybrid collaborative filtering and content-based system with real-time user preference adaptation.</p>
+                <div class="project-tags">
+                  <span>PySpark</span>
+                  <span>FastAPI</span>
+                  <span>Redis</span>
+                </div>
+                <a href="#" class="project-link"><i class="fab fa-github"></i> View on GitHub</a>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-content">
+                <h3>Anomaly Detection Platform</h3>
+                <p>Self-supervised learning approach for detecting anomalies in manufacturing sensor data and images.</p>
+                <div class="project-tags">
+                  <span>PyTorch</span>
+                  <span>Kafka</span>
+                  <span>Grafana</span>
+                </div>
+                <a href="#" class="project-link"><i class="fab fa-github"></i> View on GitHub</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" class="section contact">
+          <h2 class="section-title">Get In Touch</h2>
+          <div class="contact-grid">
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p>Feel free to reach out via email or connect with me on social media.</p>
+              <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:robert@example.com">robert@example.com</a>
+              </div>
+              <div class="contact-item">
+                <i class="fab fa-linkedin"></i>
+                <a href="https://linkedin.com/in/robert" target="_blank" rel="noopener noreferrer">linkedin.com/in/robert</a>
+              </div>
+              <div class="contact-item">
+                <i class="fab fa-github"></i>
+                <a href="https://github.com/robertsenatorov" target="_blank" rel="noopener noreferrer">github.com/robertsenatorov</a>
+              </div>
+            </div>
+            <div class="contact-form-container">
+              <h3>Send a Message</h3>
+              <form class="contact-form">
+                <div class="form-group">
+                  <label for="name-input">Name</label>
+                  <input type="text" id="name-input" placeholder="Your Name" required>
+                  <span class="focus-border"></span>
+                </div>
+                <div class="form-group">
+                  <label for="email-input">Email</label>
+                  <input type="email" id="email-input" placeholder="Your Email" required>
+                  <span class="focus-border"></span>
+                </div>
+                <div class="form-group">
+                  <label for="message-input">Message</label>
+                  <textarea id="message-input" placeholder="Your Message" rows="5" required></textarea>
+                  <span class="focus-border"></span>
+                </div>
+                <button type="submit" class="btn primary-btn">Send Message</button>
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>&copy; <span id="current-year">2025</span> Robert Senatorov. All rights reserved.</p>
+      </footer>
+
+    </div> </div> <button class="scroll-top" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <div class="loader">
+      <div class="loader-spinner"></div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
